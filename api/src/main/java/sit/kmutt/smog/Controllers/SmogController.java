@@ -17,6 +17,9 @@ public class SmogController {
 
     @GetMapping("/smog")
     public ResponseEntity<Smog> getUser(HttpServletRequest request) {
+
+    @GetMapping("/stats")
+    public ResponseEntity<Smog> getSmogStats(HttpServletRequest request) {
         return new ResponseEntity<Smog>(smogService.getRecentSmog(), HttpStatus.OK);
     }
 }
