@@ -26,6 +26,9 @@ body {
     background-position: right;
     background-repeat: no-repeat;
 }
+.row {
+    padding: 0 15px;
+}
 .information {
     width: 100%;
 }
@@ -54,12 +57,42 @@ body {
     width: 30%;
 }
 .alchemist {
-    width: 3.5%;
+    width: 4%;
+}
+#recommend {
+    line-height: 1;
 }
 @media (max-width:375px) {
+    .row {
+        line-height: 1;
+    }
+    .alchemist {
+        width: 10%;
+    }
     .logo-group {
         width: 40%;
     }
+    #pm25 {
+        font-size: 4em;
+    }
+    .information {
+        padding: 1em 0;
+        background: rgba(255, 255, 255, 0.8);
+    }
+    .information b {
+        font-size: 1em;
+    }
+    #recommend {
+        font-size: 0.5em;
+    }
+    #message {
+        font-size: 2em;
+    }
+    .logo-container h3 {
+        font-size: 0.9em;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024) {
 }
 </style>
 <body>
@@ -68,16 +101,19 @@ body {
     </div>
     <div id="main" class="container">
         <div class="information">
-            <b>PM2.5</b>
-            <div><span id="pm25">0</span> <b> AQI</b></div>
+            <div><b>PM 2.5 </b><span id="pm25">0</span> <b> AQI</b></div>
             <h1 id="message">none</h1>
-            <h1>"<span id='recommend'></span>"</h1>
+            <h1>
+                <div class="row">"<span id='recommend'></span>"</div>
+            </h1>
         </div>
     </div>
     <div class="logo-container">
-        <h3 id="place">ด้วยความเป็นห่วงจาก WIPPO ที่ยืนอยู่ตรง <b><u>ตึกคณะ SIT</u></b></h3>
-        <h3>ณ วัน/เวลา <span id='time'>-</span></h3>
-        <img class="alchemist" src="alchemist.png" alt="">
+        <div class="row">
+            <h3 id="place">ด้วยความเป็นห่วงจาก WIPPO ที่ยืนอยู่ตรง <b><u>ตึกคณะ SIT</u></b></h3>
+            <h3>ณ วัน/เวลา <span id='time'>-</span></h3>
+            <img class="alchemist" src="alchemist.png" alt="">
+        </div>
     </div>
 </body>
 <script>
@@ -148,7 +184,7 @@ fetch('https://secure.chakree.me/airq/')
       recommend.innerText = level.recommend;
       time.innerText = json.last_updated;
       main.style.backgroundColor = level.color;
-      restart();
+    //   restart();
   });
 </script>
 </html>
