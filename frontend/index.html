@@ -16,8 +16,15 @@ body {
     height: 100%;
     font-size: 18px;
     font-family: 'Kanit', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     width: 100%;
     padding: 3em 0;
@@ -62,7 +69,10 @@ body {
 #recommend {
     line-height: 1;
 }
-@media (max-width:375px) {
+@media (max-width:414px) {
+    .container {
+        min-height: 60%;
+    }
     .row {
         line-height: 1;
     }
@@ -89,10 +99,13 @@ body {
         font-size: 2em;
     }
     .logo-container h3 {
-        font-size: 0.9em;
+        font-size: 0.8em;
     }
 }
 @media (min-width: 768px) and (max-width: 1024) {
+    .container {
+        min-height: 80%;
+    }
 }
 </style>
 <body>
@@ -183,7 +196,7 @@ fetch('https://secure.chakree.me/airq/')
       message.innerText = level.message;
       recommend.innerText = level.recommend;
       time.innerText = json.last_updated;
-      main.style.backgroundColor = level.color;
+      document.getElementsByTagName('body')[0].style.backgroundColor = level.color;
     //   restart();
   });
 </script>
