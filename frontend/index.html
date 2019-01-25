@@ -81,6 +81,7 @@ body {
     </div>
 </body>
 <script>
+var MILISECOND = 1000;
 var information = {
     good: { message: 'อากาศดีมากๆ', color: '#56c9f4', recommend: 'คุณภาพอากาศดีมาก เหมาะสำหรับการทำกิจกรรมกลางแจ้งและท่องเที่ยว'},
     fine: { message: 'อากาศดี', color: '#7bc550', recommend: 'คุณภาพอากาศดี สามารถทำกิจกรรมกลางแจ้งได้ตามปกติ'},
@@ -89,10 +90,11 @@ var information = {
     dangerous: { message: 'อันตรายและมีผลต่อสุขภาพ', color: '#ea283c', recommend: 'หลีกเลี่ยงกิจกรรมกลางแจ้งทุกชนิด!'},
 };
 var restart = function() {
-    var second = 10000;
+    var second = 10;
+    var time = second * MILISECOND;
     setTimeout(function() {
         window.location.reload();
-    }, second);
+    }, time);
 };
 
 var calcuateConcentration = function(pm25) {
@@ -134,15 +136,13 @@ fetch('https://secure.chakree.me/airq/')
   .then(function(json) {
       var pm25 = json && +json.pm25;
       var concentration = calcuateConcentration(pm25);
-      console.log(concentration)
       var aqi = calcuateEquation(concentration);
-      console.log(aqi)
       var level = checkLevel(aqi);
-      var main = document.getElementById('main')
-      var number = document.getElementById('pm25')
-      var message = document.getElementById('message')
-      var recommend = document.getElementById('recommend')
-      var time = document.getElementById('time')
+      var main = document.getElementById('main');
+      var number = document.getElementById('pm25');
+      var message = document.getElementById('message');
+      var recommend = document.getElementById('recommend');
+      var time = document.getElementById('time');
       number.innerText = aqi;
       message.innerText = level.message;
       recommend.innerText = level.recommend;
