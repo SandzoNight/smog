@@ -39,8 +39,10 @@ body {
 .information {
     width: 100%;
 }
-#pm25 {
+#aqi, #pm25 {
     line-height: 1;
+}
+#aqi {
     font-size: 10em;
 }
 .information b {
@@ -115,7 +117,8 @@ body {
     <div id="main" class="container">
         <div class="information">
             <div>
-                <b>PM 2.5 AQI: </b><span id="pm25">0</span>
+                <b>AQI: </b><span id="aqi">0</span><br>
+                <h3 style="margin-top:0">จาก PM2.5: <span id="pm25"></span> μg/m3</h3>
             </div>
             <h1 id="message">none</h1>
             <h1>
@@ -191,10 +194,12 @@ fetch('https://secure.chakree.me/airq/')
       var level = checkLevel(aqi);
       var main = document.getElementById('main');
       var number = document.getElementById('pm25');
+      var aqiElement = document.getElementById('aqi');
       var message = document.getElementById('message');
       var recommend = document.getElementById('recommend');
       var time = document.getElementById('time');
-      number.innerText = aqi;
+      aqiElement.innerText = aqi;
+      number.innerText = pm25;
       message.innerText = level.message;
       recommend.innerText = level.recommend;
       time.innerText = json.last_updated;
