@@ -1,0 +1,23 @@
+{
+  "name": "SMOG : Alchemist",
+  "short_name": "SMOG",
+  "theme_color": "#293039",
+  "background_color": "#b4b4b4",
+  "display": "browser",
+  "orientation": "portrait",
+  "Scope": "/",
+  "start_url": "/?origin=shortcut",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "splash_pages": null
+}
