@@ -3,7 +3,7 @@
   "short_name": "SMOG",
   "theme_color": "#293039",
   "background_color": "#b4b4b4",
-  "display": "browser",
+  "display": "standalone",
   "orientation": "portrait",
   "Scope": "/",
   "start_url": "/?origin=shortcut",
