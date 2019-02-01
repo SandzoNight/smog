@@ -58,6 +58,7 @@ body {
   font-weight: bold;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .message-text span {
   padding: 0 10px;
