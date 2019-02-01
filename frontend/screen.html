@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-82920412-6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-82920412-6');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="manifest" href="manifest.json">
+    <title>SMOG by Alchemist</title>
+    <link rel="shortcut icon" type="image/png" href="icon-192.png"/>
+    <meta property="og:image" content="https://smog.itbangmod.in.th/icon-512.png" />
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+</head>
+<style>
+html {
+    height: 100%;
+}
+body {
+    margin: 0;
+    height: 100%;
+    font-size: 18px;
+    font-family: 'Kanit', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: normal;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-image: url('./wippo-mask.png');
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    flex-direction: column;
+}
+.row {
+    padding: 0 15px;
+}
+.information {
+    width: 100%;
+}
+#aqi, #pm25 {
+    line-height: 1;
+    font-size: 6.5em;
+}
+.information b {
+    font-size: 3em;
+}
+#message {
+    font-size: 3em;
+    margin: 0;
+}
+.logo-container {
+    line-height: 1;
+    text-align: center;
+    width: 100%;
+    background: black;
+    padding: 0.3em 0;
+}
+.logo-container h3 {
+    color: #fff;
+}
+.logo-group {
+    width: 30%;
+}
+.alchemist {
+    width: 4%;
+    margin-left: 15px;
+}
+#recommend {
+    line-height: 1.3em;
+}
+.indexNumber {
+    line-height: 1;
+    font-size: 3em;
+    color: #272626;
+}
+
+@media (min-width:1440px) {
+    #pm25 {
+        font-size: 10em;
+    }
+    .information b {
+        font-size: 4em;
+    }
+    #recommend {
+        font-size: 1.3em;
+    }
+    #message {
+        font-size: 3em;
+    }
+    .logo-container h3 {
+        font-size: 0.8em;
+    }
+    h3 {
+        padding: 0 10px;
+        font-size: 2em;
+    }
+}
+@media (max-width: 575.98px) {
+    .container {
+        min-height: 100%;
+        justify-content: normal;
+    }
+    .row {
+        line-height: 1;
+    }
+    .alchemist {
+        width: 1.3em;
+        margin-left: 5px;
+    }
+    .logo-group {
+        width: 40%;
+    }
+    #pm25 {
+        font-size: 4em;
+    }
+    .information {
+        padding: 1em 0;
+        background: rgba(255, 255, 255, 0.5);
+        height: 100%;
+    }
+    .information b {
+        font-size: 1em;
+    }
+    #recommend {
+        font-size: 0.5em;
+    }
+    #message {
+        font-size: 2em;
+    }
+    .logo-container h3 {
+        font-size: 0.8em;
+    }
+    h3 {
+        padding: 0 10px;
+    }
+    .indexNumber {
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 1199.98px) {
+    .container {
+        min-height: 100%;
+        background-size: initial;
+        background-position: right;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 4095.98px) {
+
+}
+
+@media (min-width: 4096px) {
+    #pm25 {
+        font-size: 14em;
+    }
+    .information {
+        font-size: 1.2em;
+    }
+    .information b {
+        font-size: 7em;
+    }
+    #recommend {
+        font-size: 1.8em;
+    }
+    #message {
+        font-size: 5em;
+    }
+    .logo-container h3 {
+        font-size: 0.8em;
+    }
+    h3 {
+        font-size: 4em;
+    }
+}
+
+/* THIS IS FOR VERTICAL 4K SCREEN */
+@media (min-width: 2160px) and (min-height: 4096px) {
+    .logo-container {
+        padding-top: 50px;
+        height: 13%;
+    }
+    .logo-group {
+        width: 80%;
+    }
+    .alchemist {
+        width: 10%;
+        margin-left: 50px;
+    }
+    .container {
+        background-image: url('./wippo-mask.png');
+        background-size: cover;
+        background-position: left;
+    }
+    #pm25 {
+        font-size: 40em;
+    }
+    .information b {
+        font-size: 10em;
+    }
+    #recommend {
+        margin-top: 100px;
+        font-size: 5em;
+        line-height: 1.2em;
+    }
+    #message {
+        font-size: 8em;
+    }
+    .logo-container h3 {
+        font-size: 0.8em;
+    }
+    h3 {
+        padding: 0 10px;
+        font-size: 6em;
+    }
+    .indexNumber {
+        font-size: 6em;
+    }
+}
+</style>
+<body>
+    <div class="logo-container">
+        <img class="logo-group" src="logo.svg" alt="">
+        <a href="http://alchemist.itbangmod.in.th/" target="_blank">
+            <img class="alchemist" src="alchemist.png" alt="">
+        </a>
+    </div>
+    <div id="main" class="container">
+        <div class="information">
+            <h3>
+                ข้อมูลล่าสุด ณ วัน/เวลา <span id='time'>-</span> <br/> บริเวณหน้าคณะเทคโนโลยีสารสนเทศ (SIT)
+            </h3>
+            <div class="row">
+                <b>ปริมาณฝุ่น PM2.5 </b>
+            </div>
+            <div class="row">
+                <span id="pm25">0</span>
+            </div>
+            <div>
+                <span class="indexNumber">มคก./ลบ.ม.</span>
+            </div>
+            <h1 id="message">none</h1>
+            <h1>
+                <div class="row"><div id='recommend'></div></div>
+            </h1>
+        </div>
+    </div>
+</body>
+
+<script>
+var MILISECOND = 25000;
+var information = {
+    good: { message: 'อากาศดีมากๆ', color: '#56c9f4', recommend: 'คุณภาพอากาศดีมาก เหมาะสำหรับการทำกิจกรรมกลางแจ้งและท่องเที่ยว'},
+    fine: { message: 'อากาศดี', color: '#7bc550', recommend: 'คุณภาพอากาศดี สามารถทำกิจกรรมกลางแจ้งได้ตามปกติ'},
+    normal: { message: 'อากาศปกติ', color: '#fff76c', recommend: 'หากมีอาการไอ จาม ควรลดการทำกิจกรรมกลางแจ้ง'},
+    worse: { message: 'เริ่มมีผลกระทบต่อสุขภาพ', color: '#f79738', recommend: 'ควรเฝ้าระวังสุขภาพและลดการทำกิจกรรมกลางแจ้ง ควรใส่อุปกรณ์ป้องกันตนเองหากจำเป็น'},
+    dangerous: { message: 'อันตรายและมีผลต่อสุขภาพ', color: '#ea283c', recommend: 'หลีกเลี่ยงกิจกรรมกลางแจ้งทุกชนิด!'},
+};
+
+var informationPM25 = {
+    good: { message: '', color: '#56c9f4', recommend: ''},
+    fine: { message: '', color: '#7bc550', recommend: ''},
+    normal: { message: '', color: '#fff76c', recommend: '\"หากมีอาการไอ จาม ควรลดการทำกิจกรรมกลางแจ้ง\"'},
+    worse: { message: 'เริ่มมีผลกระทบต่อสุขภาพ', color: '#f79738', recommend: '\"ควรเฝ้าระวังสุขภาพและลดการทำกิจกรรมกลางแจ้ง ควรใส่อุปกรณ์ป้องกันตนเองหากจำเป็น\"'},
+    dangerous: { message: 'อันตรายและมีผลต่อสุขภาพ', color: '#ea283c', recommend: '\"หลีกเลี่ยงกิจกรรมกลางแจ้งทุกชนิด!\"'},
+};
+
+var restart = function() {
+    var second = 10;
+    var time = second * MILISECOND;
+    setTimeout(function() {
+        window.location.reload();
+    }, time);
+};
+
+var calcuateConcentration = function(pm25) {
+    return Math.floor(10 * pm25) / 10;
+}
+
+var linear = function(aHigh, aLow, conHigh, conLow, con) {
+    var conc = parseFloat(con);
+    var aqi = (((aHigh - aLow) / (conHigh - conLow)) * (conc - conLow)) + aLow;
+    var linear = Math.round(aqi);
+    return linear;
+}
+
+var calcuateEquation = function(concentration) {
+    switch (true) {
+        case concentration <= 12.0: return linear(50, 0, 12, 0, concentration);
+        case concentration <= 35.4: return linear(100, 51, 35.4, 12.1, concentration);
+        case concentration <= 55.4: return linear(150, 101, 55.4, 35.5, concentration);
+        case concentration <= 150.4: return linear(200, 151, 150.4, 55.5, concentration);
+        case concentration <= 250.4: return linear(300, 201, 250.4, 150.5, concentration);
+        default: return linear(500, 301, 500.4, 250.5, concentration);
+    }
+}
+
+var checkLevel = function(aqi) {
+    switch (true) {
+        case (aqi <= 25): return information.good;
+        case (aqi <= 50): return information.fine;
+        case (aqi <= 100): return information.normal;
+        case (aqi <= 200): return information.worse;
+        default: return information.dangerous;
+    }
+}
+
+var checkPM25 = function(pm25) {
+    switch (true) {
+        case (pm25 <= 25): return informationPM25.good;
+        case (pm25 <= 37): return informationPM25.fine;
+        case (pm25 <= 50): return informationPM25.normal;
+        case (pm25 <= 90): return informationPM25.worse;
+        default: return informationPM25.dangerous;
+    }
+}
+
+fetch('https://secure.chakree.me/airq/')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(json) {
+      var pm25 = json && +json.pm25;
+    //   var concentration = calcuateConcentration(pm25);
+    //   var aqi = calcuateEquation(concentration);
+    //   var level = checkLevel(aqi);
+      var level = checkPM25(pm25);    
+      var main = document.getElementById('main');
+      var number = document.getElementById('pm25');
+      var aqiElement = document.getElementById('aqi');
+      var message = document.getElementById('message');
+      var recommend = document.getElementById('recommend');
+      var time = document.getElementById('time');
+      number.innerText = pm25;
+      message.innerText = level.message;
+      recommend.innerText = level.recommend;
+      time.innerText = json.last_updated;
+      document.getElementById('main').style.backgroundColor = level.color;
+      restart();
+  });
+</script>
+</html>
