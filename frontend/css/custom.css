@@ -1,0 +1,150 @@
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Kanit', sans-serif;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  height: 54px;
+  width: 100%;
+  background-color: #313131;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.header img, .header a {
+  height: 100%;
+}
+
+#first-section {
+  padding-top: 54px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  font-size: 20px;
+  background: url('../img/wippo-mask.png') no-repeat right;
+  background-color: #ffffff;
+  background-position-y: bottom;
+}
+
+.last-update {
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.detail {
+  text-align: center;
+}
+
+.quantity {
+  font-size: 4em;
+  font-weight: bold;
+  line-height: 1.5em;
+}
+
+.message-section {
+  text-align: center;
+}
+
+.message-text {
+  font-size: 0.8em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+.message-text span {
+  padding: 0 10px;
+}
+
+.recommend-text {
+  font-size: 0.7em;
+  align-items: center;
+  display: flex;
+}
+.recommend-text span {
+  display: block;
+  padding: 0 10px;
+  border-left: 2px solid #756f69;
+}
+
+#statusIcon img {
+  max-width: 80%;
+}
+
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+}
+
+@media (min-width: 575.98px) {
+  #first-section {
+    font-size: 1.8em;
+  }
+}
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 1024px) {
+  .detail {
+    background-color: rgba(226, 226, 226, 0.521);
+    margin: 0 10px;
+    padding: 20px 10px;
+    border-radius: 20px;
+    box-shadow: 3px 3px #756f69;
+  }
+}
+
+/* // Medium devices (tablets, less than 992px) */
+@media (min-width: 1025px) {
+  #first-section {
+    font-size: 2em;
+    padding-top: 80px;
+  }
+  .header {
+    height: 80px;
+  }
+  .message-section {
+    background-color: rgba(226, 226, 226, 0.521);
+    margin: 0 10px;
+    padding: 20px 10px;
+    margin: 0 100px;
+    border-radius: 20px;
+    box-shadow: 3px 3px #756f69;
+  }
+  .message-text {
+    font-size: 1.1em;
+  }
+}
+
+@media (min-width: 1439px) {
+  #first-section {
+    font-size: 2.5em;
+  }
+}
+
+@media (min-width: 1919px) {
+  #first-section {
+    font-size: 3em;
+  }
+}
+
+@media (min-width: 3840px) {
+  .header {
+    height: 200px;
+  }
+  #first-section {
+    padding: 200px;
+    font-size: 5em;
+  }
+}
+
+
+/* // Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+
+}
