@@ -36,7 +36,8 @@ body {
 
 .last-update {
   text-align: center;
-  font-size: 0.8em;
+  font-size: 0.6em;
+  margin-top: 30px;
 }
 
 .detail {
@@ -51,6 +52,7 @@ body {
 
 .message-section {
   text-align: center;
+  margin-top: 30px;
 }
 
 .message-text {
@@ -115,9 +117,9 @@ body {
   }
   .message-section {
     background-color: rgba(226, 226, 226, 0.521);
-    margin: 0 10px;
     padding: 20px 10px;
-    margin: 0 100px;
+    margin-left: 100px;
+    margin-right: 100px;
     border-radius: 20px;
     box-shadow: 3px 3px #756f69;
   }
