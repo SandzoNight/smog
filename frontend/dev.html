@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-82920412-6"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+          dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'UA-82920412-6');
+  </script>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="https://smog.itbangmod.in.th/img/icon-512.png" />
+  <title>SMOG by Alchemist</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="shortcut icon" type="image/png" href="img/icon-192.png"/>
+  <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/custom.css" />
+  <script defer src="js/fa/all.min.js"></script>
+  <script src="js/smog.js"></script>
+</head>
+<body>
+  <div class="header">
+    <a href="https://www.facebook.com/wipcamp" target="_blank">
+      <img src="img/logo.svg"/>
+    </a>
+    <a href="https://alchemist.itbangmod.in.th" target="_blank">
+      <img src="img/alchemist.png" style="margin-left: 14px;"/>
+    </a>
+    </div>
+  <div id="first-section">
+    <div class="detail">
+      <div>ปริมาณฝุ่น PM2.5</div>
+      <div id="pm25" class="quantity">-</div>
+      <div>มคก./ลบ.ม.</div>
+      <div class="last-update">
+        ล่าสุด ณ วันเวลา <span id="lastUpdate">-</span>
+        <div>
+          <i class="fas fa-map-marker-alt"></i> บริเวณหน้าคณะเทคโนโลยีสารสนเทศ
+        </div>
+      </div>
+      <hr/>
+      <div class="row no-gutters message-section">
+        <div class="col-4 col-sm-4 message-text">
+          <span id="message"></span>
+        </div>
+        <div class="col-8 col-sm-8 recommend-text">
+          <span id="recommend"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="" style="background-color: lightcoral">
+      Second
+    </div>
+  </div>
+  <script src="js/jquery-3.3.1.slim.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
