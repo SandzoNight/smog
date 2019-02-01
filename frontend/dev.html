@@ -23,7 +23,6 @@
   <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="css/custom.css" />
   <script defer src="js/fa/all.min.js"></script>
-  <script src="js/smog.js"></script>
 </head>
 <body>
   <div class="header">
@@ -33,7 +32,7 @@
     <a href="https://alchemist.itbangmod.in.th" target="_blank">
       <img src="img/alchemist.png" style="margin-left: 14px;"/>
     </a>
-    </div>
+  </div>
   <div id="first-section">
     <div class="detail">
       <div>ปริมาณฝุ่น PM2.5</div>
@@ -56,13 +55,22 @@
       </div>
     </div>
   </div>
-  <div>
-    <div class="" style="background-color: lightcoral">
-      Second
+  <div id="second-section">
+    <div class="container">
+      <div class="h3">
+        ข้อมูลเพิ่มเติม
+      </div>
+      <div>
+        <div class="h4">ปริมาณฝุ่น 24 ชั่วโมงที่ผ่านมา</div>
+        <canvas id="last24HoursChart"></canvas>
+      </div>
     </div>
   </div>
   <script src="js/jquery-3.3.1.slim.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/moment.js"></script>
+  <script src="js/Chart.bundle.min.js"></script>
+  <script src="js/smog.js"></script>
 </body>
 </html>

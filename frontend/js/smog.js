@@ -9,9 +9,9 @@ let information = {
 };
 
 let informationPM25 = {
-  good: { icon: '', message: '', color: '#56c9f4', recommend: '' },
-  fine: { icon: '', message: '', color: '#7bc550', recommend: '' },
-  normal: { icon: 'img/wippo-neutral.png', message: '', color: '#fff76c', recommend: 'หากมีอาการไอ จาม ควรลดการทำกิจกรรมกลางแจ้ง' },
+  good: { icon: 'img/wippo-happy.png', message: '', color: '#56c9f4', recommend: '' },
+  fine: { icon: 'img/wippo-happy.png', message: '', color: '#7bc550', recommend: '' },
+  normal: { icon: 'img/wippo-neutral.png', message: 'พอประมาณ', color: '#fff76c', recommend: 'หากมีอาการไอ จาม ควรลดการทำกิจกรรมกลางแจ้ง' },
   worse: { icon: 'img/wippo-mask.png', message: 'เริ่มมีผลกระทบต่อสุขภาพ', color: '#f79738', recommend: 'ควรเฝ้าระวังสุขภาพและลดการทำกิจกรรมกลางแจ้ง ควรใส่อุปกรณ์ป้องกันตนเองหากจำเป็น' },
   dangerous: { icon: 'img/wippo-mask.png', message: 'อันตรายและมีผลต่อสุขภาพ', color: '#ea283c', recommend: 'หลีกเลี่ยงกิจกรรมกลางแจ้งทุกชนิด!' },
 };
@@ -71,8 +71,7 @@ fetch(API_URL)
     return response.json();
   })
   .then(function (json) {
-    // let pm25 = json && +json.pm25;
-    let pm25 = 51;
+    let pm25 = json && +json.pm25;
     //   let concentration = calcuateConcentration(pm25);
     //   let aqi = calcuateEquation(concentration);
     //   let level = checkLevel(aqi);
@@ -87,6 +86,9 @@ fetch(API_URL)
     number.innerText = pm25;
     message.innerText = level.message;
     recommend.innerText = level.recommend;
+    if(level.recommend === '') {
+      recommend.parentNode.parentNode.remove()
+    }
     time.innerText = json.last_updated;
     document.getElementById('first-section').style.backgroundColor = level.color;
     main.style.backgroundImage = `url('${level.icon}')`
